@@ -108,37 +108,37 @@
             {
                 "title": "Create default config file",
                 "category": "Uncrustifyest",
-                "command": "uncrustify.create"
+                "command": "uncrustifyest.create"
             },
             {
                 "title": "Open config file",
                 "category": "Uncrustifyest",
-                "command": "uncrustify.open"
+                "command": "uncrustifyest.open"
             },
             {
                 "title": "Save config file",
                 "category": "Uncrustifyest",
-                "command": "uncrustify.save"
+                "command": "uncrustifyest.save"
             },
             {
                 "title": "Save config file as preset",
                 "category": "Uncrustifyest",
-                "command": "uncrustify.savePreset"
+                "command": "uncrustifyest.savePreset"
             },
             {
                 "title": "Load preset config file",
                 "category": "Uncrustifyest",
-                "command": "uncrustify.loadPreset"
+                "command": "uncrustifyest.loadPreset"
             },
             {
                 "title": "Delete preset config file",
                 "category": "Uncrustifyest",
-                "command": "uncrustify.deletePreset"
+                "command": "uncrustifyest.deletePreset"
             },
             {
                 "title": "Upgrade config file",
                 "category": "Uncrustifyest",
-                "command": "uncrustify.upgrade"
+                "command": "uncrustifyest.upgrade"
             }
         ]
     },

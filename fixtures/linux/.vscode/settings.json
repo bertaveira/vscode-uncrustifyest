@@ -1,3 +1,3 @@
 {
-    "uncrustify.configPath.linux": "uncrustify.linux.cfg"
+    "uncrustifyest.configPath.linux": "uncrustify.linux.cfg"
 }
