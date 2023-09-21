@@ -134,7 +134,7 @@ export function getWorkspacePath() : vsc.Uri {
  * @return The `uncrustify` extension configuration object
  */
 export function getExtensionConfig(folderUri?: vsc.Uri) : vsc.WorkspaceConfiguration {
-    return vsc.workspace.getConfiguration('uncrustify', folderUri ?? getWorkspacePath());
+    return vsc.workspace.getConfiguration('uncrustifyest', folderUri ?? getWorkspacePath());
 }
 
 /**

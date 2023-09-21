@@ -47,14 +47,14 @@ export default class Formatter implements vsc.DocumentFormattingEditProvider,
         options: vsc.FormattingOptions,
         token: vsc.CancellationToken
     ): Promise<vsc.TextEdit[]> {
-        const configuration = vsc.workspace.getConfiguration("uncrustify", document.uri);
+        const configuration = vsc.workspace.getConfiguration("uncrustifyest", document.uri);
         const useTempFile = configuration.get('useTempFile');
         const useReplaceOption = configuration.get('useReplaceOption');
         const useDirectFile = useTempFile || useReplaceOption;
 
         if (useTempFile) {
             if (this.tempDir == null) {
-                this.tempDir = await u.promisify(temp.mkdir)(vsc.env.appName + '.' + "uncrustify");
+                this.tempDir = await u.promisify(temp.mkdir)(vsc.env.appName + '.' + "uncrustifyest");
                 logger.dbg('temporary directory: ' + this.tempDir);
             }
 
@@ -143,7 +143,7 @@ export default class Formatter implements vsc.DocumentFormattingEditProvider,
     }
 }
 
-const langOverrides = vsc.workspace.getConfiguration('uncrustify').get('langOverrides');
+const langOverrides = vsc.workspace.getConfiguration('uncrustifyest').get('langOverrides');
 
 const languageMap = Object.assign(
     {

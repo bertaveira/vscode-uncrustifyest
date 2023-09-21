@@ -1,6 +1,6 @@
 import * as vsc from 'vscode';
 
-const output: vsc.OutputChannel = vsc.window.createOutputChannel('Uncrustify');
+const output: vsc.OutputChannel = vsc.window.createOutputChannel('Uncrustifyest');
 
 export function show() {
     output.show(true);
@@ -19,7 +19,7 @@ export function log(msg: string, line = true) {
 }
 
 export function dbg(msg: string, line = true) {
-    if (vsc.workspace.getConfiguration('uncrustify').get('debug', false)) {
+    if (vsc.workspace.getConfiguration('uncrustifyest').get('debug', false)) {
         const dmsg = 'Debug: ' + msg;
 
         if (line) {
