@@ -2,7 +2,7 @@
     "name": "uncrustifyest",
     "displayName": "uncrustifyest",
     "description": "Code format using uncrustify",
-    "version": "4.0.2",
+    "version": "4.0.3",
     "publisher": "BernardoTaveira",
     "license": "MIT",
     "homepage": "https://github.com/bertaveira/vscode-uncrustifyest",
