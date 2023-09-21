@@ -3,7 +3,7 @@
     "displayName": "uncrustifyest",
     "description": "Code format using uncrustify",
     "version": "4.0.0",
-    "publisher": "bertaveira",
+    "publisher": "BernardoTaveira",
     "license": "MIT",
     "homepage": "https://github.com/bertaveira/vscode-uncrustifyest",
     "icon": "images/uncrustify.png",
