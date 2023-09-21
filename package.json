@@ -1,11 +1,11 @@
 {
-    "name": "uncrustify",
-    "displayName": "Uncrustify",
+    "name": "uncrustifyest",
+    "displayName": "uncrustifyest",
     "description": "Code format using uncrustify",
-    "version": "3.1.0",
-    "publisher": "zachflower",
+    "version": "4.0.0",
+    "publisher": "bertaveira",
     "license": "MIT",
-    "homepage": "https://github.com/zachflower/vscode-uncrustify",
+    "homepage": "https://github.com/bertaveira/vscode-uncrustifyest",
     "icon": "images/uncrustify.png",
     "galleryBanner": {
         "color": "#1F1F1F",
@@ -13,10 +13,10 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/zachflower/vscode-uncrustify.git"
+        "url": "https://github.com/bertaveira/vscode-uncrustifyest.git"
     },
     "bugs": {
-        "url": "https://github.com/zachflower/vscode-uncrustify/issues"
+        "url": "https://github.com/bertaveira/vscode-uncrustifyest/issues"
     },
     "engines": {
         "vscode": "^1.47.0"
