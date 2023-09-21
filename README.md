@@ -1,3 +1,6 @@
+> [!NOTE]  
+> This extension is a slightly modified version of the one developed by zachflower. Due to his innactivity and my need to add a few features and fixes this extension fork was created. Feel free to create issues and pull requests and I will try to support it as much as I can.
+
 # Uncrustify Formatter for Visual Studio Code
 
 [![.github/workflows/vscode.yml](https://github.com/zachflower/vscode-uncrustify/workflows/main/badge.svg?branch=main)](https://github.com/zachflower/vscode-uncrustify/workflows/main.yml)
