@@ -2,7 +2,7 @@
     "name": "uncrustifyest",
     "displayName": "uncrustifyest",
     "description": "Code format using uncrustify",
-    "version": "4.0.3",
+    "version": "4.0.4",
     "publisher": "BernardoTaveira",
     "license": "MIT",
     "homepage": "https://github.com/bertaveira/vscode-uncrustifyest",
@@ -139,6 +139,35 @@
                 "title": "Upgrade config file",
                 "category": "Uncrustifyest",
                 "command": "uncrustifyest.upgrade"
+            }
+        ],
+        "languages": [
+            {
+              "id": "c",
+              "filenames": [
+                ".c",
+                ".h"
+              ]
+            },
+            {
+              "id": "cpp",
+                "filenames": [
+                    ".cpp",
+                    ".hpp",
+                    ".cc",
+                    ".hh",
+                    ".cxx",
+                    ".hxx",
+                    ".c++",
+                    ".h++",
+                    ".C",
+                    ".H",
+                    ".cp",
+                    ".CPP",
+                    ".c__",
+                    ".h__",
+                    ".cs"
+                ]
             }
         ]
     },
