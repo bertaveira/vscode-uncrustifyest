@@ -3,7 +3,7 @@ import * as vsc from 'vscode';
 import * as logger from './logger';
 import * as util from './util';
 import Formatter from './formatter';
-import * as fs from 'fs';
+import * as fs from 'fs-extra';
 
 let extContext: vsc.ExtensionContext;
 
