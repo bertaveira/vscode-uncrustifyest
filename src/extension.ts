@@ -7,15 +7,27 @@ import Formatter from './formatter';
 
 let extContext: vsc.ExtensionContext;
 
+const supportedLanguages = [
+    'c',
+    'cpp',
+    'csharp',
+    'd',
+    'java',
+    'objective-c',
+    'pawn',
+    'pde',
+    'vala'
+  ];
+
 export function activate(context: vsc.ExtensionContext) {
     logger.dbg('extension started');
     extContext = context;
 
     const formatter = new Formatter();
     const modes = util.modes();
-    context.subscriptions.push(vsc.languages.registerDocumentFormattingEditProvider(modes, formatter));
-    context.subscriptions.push(vsc.languages.registerDocumentRangeFormattingEditProvider(modes, formatter));
-    context.subscriptions.push(vsc.languages.registerOnTypeFormattingEditProvider(modes, formatter, ';', '}'));
+    context.subscriptions.push(vsc.languages.registerDocumentFormattingEditProvider(supportedLanguages, formatter));
+    context.subscriptions.push(vsc.languages.registerDocumentRangeFormattingEditProvider(supportedLanguages, formatter));
+    context.subscriptions.push(vsc.languages.registerOnTypeFormattingEditProvider(supportedLanguages, formatter, ';', '}'));
     logger.dbg('registered formatter for modes: ' + modes);
 
     vsc.commands.registerCommand('uncrustify.create', () => {
