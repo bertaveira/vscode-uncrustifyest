@@ -1,9 +1,9 @@
-import * as fs from 'fs-extra';
 import * as cp from 'child_process';
 import * as vsc from 'vscode';
 import * as logger from './logger';
 import * as util from './util';
 import Formatter from './formatter';
+import * as fs from 'fs';
 
 let extContext: vsc.ExtensionContext;
 
