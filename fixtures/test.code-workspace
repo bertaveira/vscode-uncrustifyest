@@ -8,12 +8,12 @@
     }
   ],
   "settings": {
-    "editor.defaultFormatter": "zachflower.uncrustify",
+    "editor.defaultFormatter": "BernardoTaveira.uncrustifyest",
     "[c]": {
-      "editor.defaultFormatter": "zachflower.uncrustify"
+      "editor.defaultFormatter": "BernardoTaveira.uncrustifyest",
     },
-    "uncrustify.configPath.linux": "uncrustify.cfg",
-    "uncrustify.configPath.windows": "uncrustify.cfg",
-    "uncrustify.configPath.macos": "uncrustify.cfg",
+    "uncrustifyest.configPath.linux": "uncrustify.cfg",
+    "uncrustifyest.configPath.windows": "uncrustify.cfg",
+    "uncrustifyest.configPath.macos": "uncrustify.cfg",
   }
 }

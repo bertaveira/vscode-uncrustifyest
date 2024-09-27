@@ -18,7 +18,7 @@ export function activate(context: vsc.ExtensionContext) {
     context.subscriptions.push(vsc.languages.registerOnTypeFormattingEditProvider(modes, formatter, ';', '}'));
     logger.dbg('registered formatter for modes: ' + modes);
 
-    vsc.commands.registerCommand('uncrustify.create', () => {
+    vsc.commands.registerCommand('uncrustifyest.create', () => {
         logger.dbg('command: create');
 
         if (!vsc.workspace.workspaceFolders || !vsc.workspace.workspaceFolders.length) {
@@ -59,10 +59,10 @@ export function activate(context: vsc.ExtensionContext) {
             .catch(reason => logger.dbg(reason));
     });
 
-    vsc.commands.registerCommand('uncrustify.open', () =>
+    vsc.commands.registerCommand('uncrustifyest.open', () =>
         vsc.commands.executeCommand('vscode.open', vsc.Uri.file(util.configPath())));
 
-    vsc.commands.registerCommand('uncrustify.save', async config => {
+    vsc.commands.registerCommand('uncrustifyest.save', async config => {
         logger.dbg('command: save');
 
         if (!config) {
@@ -98,7 +98,7 @@ export function activate(context: vsc.ExtensionContext) {
         }
     });
 
-    vsc.commands.registerCommand('uncrustify.savePreset', async (config, name) => {
+    vsc.commands.registerCommand('uncrustifyest.savePreset', async (config, name) => {
         logger.dbg('command: savePreset');
 
         if (!config) {
@@ -133,8 +133,8 @@ export function activate(context: vsc.ExtensionContext) {
             return;
         }
 
-        await vsc.commands.executeCommand('uncrustify.create');
-        await vsc.commands.executeCommand('uncrustify.save', presets[name]);
+        await vsc.commands.executeCommand('uncrustifyest.create');
+        await vsc.commands.executeCommand('uncrustifyest.save', presets[name]);
 
         if (!internal) {
             vsc.window.showInformationMessage('Preset loaded !');
@@ -154,7 +154,7 @@ export function activate(context: vsc.ExtensionContext) {
         return await (!internal && vsc.window.showInformationMessage('Preset deleted !'));
     });
 
-    vsc.commands.registerCommand('uncrustify.upgrade', async config => {
+    vsc.commands.registerCommand('uncrustifyest.upgrade', async config => {
         logger.dbg('command: upgrade');
 
         if (!config) {
@@ -162,9 +162,9 @@ export function activate(context: vsc.ExtensionContext) {
             return;
         }
 
-        await vsc.commands.executeCommand('uncrustify.savePreset', config, '');
-        await vsc.commands.executeCommand('uncrustify.loadPreset', '');
-        await vsc.commands.executeCommand('uncrustify.deletePreset', '');
+        await vsc.commands.executeCommand('uncrustifyest.savePreset', config, '');
+        await vsc.commands.executeCommand('uncrustifyest.loadPreset', '');
+        await vsc.commands.executeCommand('uncrustifyest.deletePreset', '');
         return await vsc.commands.executeCommand('vscode.open', vsc.Uri.file(util.configPath()));
     });
 }
@@ -176,7 +176,7 @@ export function deactivate() {
 export { extContext };
 
 function presetCommand(commandName: string, callback: (presets: any, name: string, internal: boolean) => any) {
-    vsc.commands.registerCommand('uncrustify.' + commandName, async name => {
+    vsc.commands.registerCommand('uncrustifyest.' + commandName, async name => {
         logger.dbg('command: ' + commandName);
 
         const presets = extContext.globalState.get('presets', {});
